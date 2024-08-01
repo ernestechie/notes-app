@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { CgSpinner } from 'react-icons/cg';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/auth-context';

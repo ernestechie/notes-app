@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import React from 'react';
 import { CgSpinner } from 'react-icons/cg';
 import { ButtonPropType } from '../types';
 

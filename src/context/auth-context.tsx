@@ -44,7 +44,7 @@ export function AuthContextProvider({
           .then((snapshot) => {
             setUserData(() => snapshot.data() as UserDataType);
           })
-          .catch((err) => {});
+          .catch(() => {});
       }
       setCheckingStatus(false);
     });

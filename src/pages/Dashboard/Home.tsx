@@ -7,7 +7,7 @@ import {
   query,
   where,
 } from 'firebase/firestore';
-import React, { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import toast from 'react-hot-toast';
 import { FaPlus } from 'react-icons/fa';
 import { IoSearchOutline } from 'react-icons/io5';
