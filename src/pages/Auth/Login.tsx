@@ -37,7 +37,6 @@ export default function Login() {
         navigate('/dashboard');
       }
     } catch (error) {
-      console.log('Error: ', error);
       toast.error('Incorrect email or password');
     } finally {
       setLoading(false);

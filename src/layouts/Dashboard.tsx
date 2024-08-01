@@ -9,8 +9,6 @@ export default function DashboardLayout() {
 
   useEffect(() => {
     // Check if user is authenticated, redirect if not.
-    console.log('Loading: ', checkingStatus);
-    console.log('Logged In: ', isAuthenticated);
 
     if (!checkingStatus && !isAuthenticated) {
       navigate('/');

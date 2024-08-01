@@ -61,7 +61,6 @@ export default function Signup() {
           .catch(() => toast.error('Something went wrong'));
       }
     } catch (error) {
-      console.log('Error: ', error);
       toast.error('Something went wrong');
     } finally {
       setLoading(false);

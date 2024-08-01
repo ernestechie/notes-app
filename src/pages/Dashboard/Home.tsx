@@ -56,8 +56,6 @@ export default function DashboardHome() {
 
       const filteredNotes = notes.filter((note) => note.id !== id);
 
-      console.log(filteredNotes);
-
       toast.loading('Deleting...');
       await deleteDoc(docRef)
         .then(() => {

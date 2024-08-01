@@ -42,12 +42,9 @@ export function AuthContextProvider({
 
         await getDoc(docRef)
           .then((snapshot) => {
-            console.log(snapshot);
             setUserData(() => snapshot.data() as UserDataType);
           })
-          .catch((err) => {
-            console.log('Error: ', err);
-          });
+          .catch((err) => {});
       }
       setCheckingStatus(false);
     });
