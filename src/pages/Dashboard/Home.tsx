@@ -29,17 +29,19 @@ export default function DashboardHome() {
     const NOTES: NotesType[] = [];
     const notesRef = collection(db, 'notes');
 
-    // Create a firebase firestore query for getting all notes for the corresponding loggedin user.
-    const q = query(notesRef, where('userId', '==', userData?.id));
+    if (userData) {
+      // Create a firebase firestore query for getting all notes for the corresponding loggedin user.
+      const q = query(notesRef, where('userId', '==', userData?.id));
 
-    onSnapshot(q, (snap) => {
-      snap.docs.forEach((doc) => {
-        NOTES.push({ ...doc.data(), id: doc.id } as NotesType);
+      onSnapshot(q, (snap) => {
+        snap.docs.forEach((doc) => {
+          NOTES.push({ ...doc.data(), id: doc.id } as NotesType);
+        });
+
+        setNotes([]);
+        setNotes(NOTES);
       });
-
-      setNotes([]);
-      setNotes(NOTES);
-    });
+    }
   }, [userData]);
 
   // This function returns the notes corresponding to the search value.
